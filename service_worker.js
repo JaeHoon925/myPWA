@@ -23,7 +23,7 @@ self.addEventListener('activate', pEvent => {
     console.log("서비스워커 동작 시작됨");
 });
 
-// 데이터 요청시 네트워크 또는 캐시에서 찾아 반환
+// 데이터 요청
 self.addEventListener('fetch', pEvent => {
     pEvent.respondWith(
         caches.match(pEvent.request)
